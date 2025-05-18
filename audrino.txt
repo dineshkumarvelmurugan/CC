@@ -1,0 +1,10 @@
+void setup() {
+  Serial.begin(9600);
+}
+void loop() {
+  float temperature = random(200, 350) / 10.0;
+  String apiKey = "UW7EUOB56NULYOCQ";
+  String url = "http://api.thingspeak.com/update?api_key=" + apiKey + "&field1=" + String(temperature);
+  Serial.println(url);
+  delay(15000);
+}
